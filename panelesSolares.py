@@ -1,23 +1,23 @@
 
-def calcularRectangulos(verticesTecho,verticesPanel):
+def calcularRectangulos(aristasTecho,aristasPanel):
     cantPaneles = 0
-    cantvertice1 = int(verticesTecho[0] / verticesPanel[0])
-    cantvertice2 = int(verticesTecho[1] / verticesPanel[1])
-    nuevoRectangulo = [(verticesTecho[0]-(verticesPanel[0]*cantvertice1)),(verticesTecho[1]-(cantvertice2*verticesPanel[1]))]
-    if verticesPanel[0] <= nuevoRectangulo[0]:
-        nuevoRectangulo[1]= verticesTecho[1] 
+    cantarista1 = int(aristasTecho[0] / aristasPanel[0])
+    cantarista2 = int(aristasTecho[1] / aristasPanel[1])
+    nuevoRectangulo = [(aristasTecho[0]-(aristasPanel[0]*cantarista1)),(aristasTecho[1]-(cantarista2*aristasPanel[1]))]
+    if aristasPanel[0] <= nuevoRectangulo[0]:
+        nuevoRectangulo[1]= aristasTecho[1] 
         nuevoRectangulo.sort()
-        cantvertice3 = int(nuevoRectangulo[0] / verticesPanel[0])
-        cantvertice4 = int(nuevoRectangulo[1] / verticesPanel[1])
-        cantPaneles = (cantvertice1 * cantvertice2) + (cantvertice3 * cantvertice4)
-    elif verticesPanel[0] <= nuevoRectangulo[1]:
-        nuevoRectangulo[0]= verticesTecho[0] 
+        cantarista3 = int(nuevoRectangulo[0] / aristasPanel[0])
+        cantarista4 = int(nuevoRectangulo[1] / aristasPanel[1])
+        cantPaneles = (cantarista1 * cantarista2) + (cantarista3 * cantarista4)
+    elif aristasPanel[0] <= nuevoRectangulo[1]:
+        nuevoRectangulo[0]= aristasTecho[0] 
         nuevoRectangulo.sort()
-        cantvertice3 = int(nuevoRectangulo[0] / verticesPanel[0])
-        cantvertice4 = int(nuevoRectangulo[1] / verticesPanel[1])
-        cantPaneles = (cantvertice1 * cantvertice2) + (cantvertice3 * cantvertice4)
+        cantarista3 = int(nuevoRectangulo[0] / aristasPanel[0])
+        cantarista4 = int(nuevoRectangulo[1] / aristasPanel[1])
+        cantPaneles = (cantarista1 * cantarista2) + (cantarista3 * cantarista4)
     else:
-        cantPaneles = cantvertice1 * cantvertice2
+        cantPaneles = cantarista1 * cantarista2
     
     return cantPaneles
 

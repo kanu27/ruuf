@@ -16,12 +16,12 @@ def areaRectangulo(baseTriangulo,alturaTriangulo):
     # a1 = X = alturaTriangulo/2m
     valorX = solve(ecuacion,X)
     valorY = m*valorX[0] + alturaTriangulo
-    vertices = [int(valorX[0]) , int(valorY)]
-    vertices.sort()
-    vertices[0] = 2*vertices[0]
-    return vertices
+    aristas = [int(valorX[0]) , int(valorY)]
+    aristas.sort()
+    aristas[0] = 2*aristas[0]
+    return aristas
 
 
 def rectanguloEntriango(baseTriangulo,alturaTriangulo,BasePanel,alturaPanel):
-    vertices = areaRectangulo(baseTriangulo,alturaTriangulo)
-    return validarRectangulos(vertices[0],vertices[1],BasePanel,alturaPanel)
+    aristas = areaRectangulo(baseTriangulo,alturaTriangulo)
+    return validarRectangulos(aristas[0],aristas[1],BasePanel,alturaPanel)
